@@ -71,6 +71,7 @@ export const registerPatient = async (req: AuthRequest, res: Response) => {
  */
 export const searchPatientByNIC = async (req: AuthRequest, res: Response) => {
     try {
+        // @ts-ignore
         const nic = req.params.nic?.toUpperCase();
 
         const patient = await Patient.findOne({ nic });

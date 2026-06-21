@@ -34,7 +34,7 @@ export const uploadMedicalFile = async (req: AuthRequest, res: Response) => {
     console.log("FILE:", req.file);
     console.log("BUFFER:", req.file?.buffer);
     console.log("BUFFER LENGTH:", req.file?.buffer?.length);
-
+    // @ts-ignore
     const { url, publicId } = await uploadToCloudinary(
       req.file.buffer,
       "meditrack/medical-files",
